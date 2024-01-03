@@ -1,24 +1,11 @@
-* {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-button {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-button:focus {
-  outline: none;
-  border: none;
-}
-
 .container aside {
   text-transform: capitalize;
 }
-.container aside .send-mail {
+.container aside .part-one {
+  position: sticky;
+  top: 2rem;
+}
+.container aside .part-one .send-mail {
   height: 21rem;
   width: 100%;
   background-color: #6C6CE5;
@@ -28,19 +15,19 @@ button:focus {
   padding: 5rem 3rem;
   margin-bottom: 6rem;
 }
-.container aside .send-mail h1 {
+.container aside .part-one .send-mail h1 {
   font-size: 3rem;
 }
-.container aside .send-mail h2 {
+.container aside .part-one .send-mail h2 {
   font-weight: 600;
   margin-bottom: 1rem;
 }
-.container aside .send-mail p {
+.container aside .part-one .send-mail p {
   letter-spacing: 0.04rem;
   line-height: 1.6rem;
   font-weight: 500;
 }
-.container aside .send-mail input {
+.container aside .part-one .send-mail input {
   position: relative;
   height: 2.2rem;
   width: 80%;
@@ -51,7 +38,7 @@ button:focus {
   outline: none;
   color: #7b7b7b;
 }
-.container aside .send-mail input::after {
+.container aside .part-one .send-mail input::after {
   content: "testt";
   position: absolute;
   width: 100rem;
@@ -61,40 +48,41 @@ button:focus {
   background-color: green;
   z-index: 100;
 }
-.container aside .stay-connected {
+.container aside .part-one .stay-connected {
   text-align: center;
 }
-.container aside .stay-connected > * {
+.container aside .part-one .stay-connected > * {
+  cursor: pointer;
   margin-top: 3rem;
 }
-.container aside .stay-connected .pointer {
+.container aside .part-one .stay-connected .pointer {
   width: 50%;
   height: 5px;
   margin-left: 45%;
   margin-top: 0.5rem;
   display: flex;
 }
-.container aside .stay-connected .pointer .line {
+.container aside .part-one .stay-connected .pointer .line {
   width: 20%;
   height: 100%;
   border-radius: 5rem;
   background-color: red;
 }
-.container aside .stay-connected .pointer > * {
+.container aside .part-one .stay-connected .pointer > * {
   margin-right: 5px;
 }
-.container aside .stay-connected .pointer .point {
+.container aside .part-one .stay-connected .pointer .point {
   width: 3%;
   height: 100%;
   border-radius: 5rem;
   background-color: red;
 }
-.container aside .stay-connected .contacts {
+.container aside .part-one .stay-connected .contacts {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.container aside .stay-connected .contacts > div {
+.container aside .part-one .stay-connected .contacts > div {
   position: relative;
   padding-top: 2rem;
   display: flex;
@@ -103,7 +91,7 @@ button:focus {
   row-gap: 0.2rem;
   color: gray;
 }
-.container aside .stay-connected .contacts > div img {
+.container aside .part-one .stay-connected .contacts > div img {
   position: absolute;
   top: 0;
   left: 30%;
@@ -112,10 +100,10 @@ button:focus {
   margin-top: -20px;
   transition-duration: 0.4s;
 }
-.container aside .stay-connected .contacts > div img:hover {
+.container aside .part-one .stay-connected .contacts > div img:hover {
   top: -0.5rem;
 }
-.container aside .stay-connected .contacts > div span:last-child {
+.container aside .part-one .stay-connected .contacts > div span:last-child {
   color: red;
   text-transform: uppercase;
   font-weight: bold;

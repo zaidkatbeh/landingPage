@@ -1,123 +1,129 @@
-@use './reset.scss';
 
 .container aside {
     text-transform: capitalize;
+    
+    .part-one {
+        position: sticky;
+        top: 2rem;
 
-    .send-mail {
-        height: 21rem;
-        width: 100%;
-        background-color: #6C6CE5;
-        border-radius: 1rem;
-        text-align: center;
-        color: white;
-        padding: 5rem 3rem;
-        margin-bottom: 6rem;
-
-        h1 {
-            font-size: 3rem;
-        }
-
-        h2{
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            letter-spacing: 0.04rem;
-            line-height: 1.6rem;
-            font-weight: 500;
-        }
-
-        input {
-            position: relative;
-            height: 2.2rem;
-            width: 80%;
-            margin-top: 1rem;
-            padding: 1rem;
-            border-radius: 6rem;
-            border: none;
-            outline: none;
-            color: #7b7b7b;
-
-            &::after {
-                content: 'testt';
-                position: absolute;
-                width: 100rem;
-                height: 100rem;
-                left: 0;
-                top: 0;
-                background-color: green;
-                z-index: 100;
+        .send-mail {
+            height: 21rem;
+            width: 100%;
+            background-color: #6C6CE5;
+            border-radius: 1rem;
+            text-align: center;
+            color: white;
+            padding: 5rem 3rem;
+            margin-bottom: 6rem;
+    
+            h1 {
+                font-size: 3rem;
             }
-        }
-    }
-
-    .stay-connected {
-        text-align: center;
-        
-        &>* {
-            margin-top: 3rem;
-        }
-        .pointer {
-            width: 50%;
-            height: 5px;
-            margin-left: 45%;
-            margin-top: 0.5rem;
-            display: flex;
-
-            .line {
-                width: 20%;
-                height: 100%;
-                border-radius: 5rem;
-                background-color: red;
+    
+            h2{
+                font-weight: 600;
+                margin-bottom: 1rem;
             }
-
-            &>* {
-                margin-right: 5px;
+    
+            p {
+                letter-spacing: 0.04rem;
+                line-height: 1.6rem;
+                font-weight: 500;
             }
-
-            .point {
-                width: 3%;
-                height: 100%;
-                border-radius: 5rem;
-                background-color: red;
-            }
-        }
-
-        .contacts {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: 1fr 1fr 1fr;
-
-            &>div {
+    
+            input {
                 position: relative;
-                padding-top: 2rem;
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                row-gap: 0.2rem;
-                color: gray;
-                img {
+                height: 2.2rem;
+                width: 80%;
+                margin-top: 1rem;
+                padding: 1rem;
+                border-radius: 6rem;
+                border: none;
+                outline: none;
+                color: #7b7b7b;
+    
+                &::after {
+                    content: 'testt';
                     position: absolute;
+                    width: 100rem;
+                    height: 100rem;
+                    left: 0;
                     top: 0;
-                    left: 30%;
-                    width: 3rem;
-                    border-radius: 4%;
-                    margin-top: -20px;
-                    transition-duration: 0.4s;
-
-                    &:hover {
-                        top: -0.5rem;
+                    background-color: green;
+                    z-index: 100;
+                }
+            }
+        }
+    
+        .stay-connected {
+    
+            text-align: center;
+            
+            &>* {
+                cursor: pointer;
+                margin-top: 3rem;
+            }
+            .pointer {
+                width: 50%;
+                height: 5px;
+                margin-left: 45%;
+                margin-top: 0.5rem;
+                display: flex;
+    
+                .line {
+                    width: 20%;
+                    height: 100%;
+                    border-radius: 5rem;
+                    background-color: red;
+                }
+    
+                &>* {
+                    margin-right: 5px;
+                }
+    
+                .point {
+                    width: 3%;
+                    height: 100%;
+                    border-radius: 5rem;
+                    background-color: red;
+                }
+            }
+    
+            .contacts {
+                display: grid;
+                gap: 2rem;
+                grid-template-columns: 1fr 1fr 1fr;
+    
+                &>div {
+                    position: relative;
+                    padding-top: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    row-gap: 0.2rem;
+                    color: gray;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 30%;
+                        width: 3rem;
+                        border-radius: 4%;
+                        margin-top: -20px;
+                        transition-duration: 0.4s;
+    
+                        &:hover {
+                            top: -0.5rem;
+                        }
+                    }
+    
+                    & span:last-child {
+                        color: red;
+                        text-transform: uppercase;
+                        font-weight: bold;
                     }
                 }
-
-                & span:last-child {
-                    color: red;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                }
+    
             }
-
         }
     }
 }

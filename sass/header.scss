@@ -20,15 +20,16 @@ header {
       font-size: 2.5rem;
       font-weight: 900;
     }
-  
+
     span {
       color: #a6a6a6;
     }
-  
+
     .links {
       position: relative;
       margin-top: 1rem;
       width: 10rem;
+
       img {
         position: absolute;
         width: 2.5rem;
@@ -52,18 +53,21 @@ header {
           top: -0.6rem;
         }
       }
+
       :nth-child(1) {
         left: 0;
       }
+
       :nth-child(2) {
         left: 30%;
       }
+
       :nth-child(3) {
         left: 60%;
       }
     }
-  
-    button{
+
+    button {
       padding: 0.5rem 1rem;
       margin-top: 1rem;
       background-color: $pink;
@@ -72,8 +76,8 @@ header {
       border: none;
       border-radius: 2rem;
     }
-  
-  
+
+
   }
 
   nav {
@@ -83,6 +87,9 @@ header {
     color: white;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    z-index: 100;
+    transition-duration: 2s;
 
     input {
       height: 0.7cm;
@@ -97,7 +104,7 @@ header {
         outline: none;
       }
     }
-    
+
     ul {
       list-style-type: none;
       list-style-image: none;
@@ -108,7 +115,7 @@ header {
       li {
         position: relative;
         cursor: pointer;
-      
+
         &::after {
           content: '';
           position: absolute;

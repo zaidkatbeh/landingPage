@@ -70,6 +70,9 @@ header nav {
   color: white;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+  transition-duration: 2s;
 }
 header nav input {
   height: 0.7cm;
