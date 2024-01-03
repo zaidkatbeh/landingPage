@@ -1,20 +1,7 @@
 @charset "UTF-8";
-* {
-  font-family: Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-button {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
 header .top-nav {
   margin-top: 1.7rem;
-  padding: 0 7rem;
+  padding: 0 17rem;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -122,30 +109,130 @@ header nav ul li:hover::after {
   left: 0;
 }
 
-.container {
-  display: grid;
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+  border: none;
+}
+
+.container aside {
+  background-color: red;
+  text-transform: capitalize;
+}
+.container aside .send-mail {
+  height: 21rem;
+  width: 100%;
+  background-color: #6C6CE5;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  padding: 5rem 3rem;
+}
+.container aside .send-mail h1 {
+  font-size: 3rem;
+}
+.container aside .send-mail h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.container aside .send-mail p {
+  letter-spacing: 0.04rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+}
+.container aside .send-mail input {
+  position: relative;
+  height: 2.2rem;
+  width: 80%;
   margin-top: 1rem;
-  grid-template-columns: 3fr 1fr;
+  padding: 1rem;
+  border-radius: 6rem;
+  border: none;
+  outline: none;
+  color: #7b7b7b;
+}
+.container aside .send-mail input::after {
+  content: "testt";
+  position: absolute;
+  width: 100rem;
+  height: 100rem;
+  left: 0;
+  top: 0;
+  background-color: green;
+  z-index: 100;
+}
+
+.container {
+  padding-right: auto;
+  display: grid;
+  margin-top: 5rem;
+  grid-template-columns: 60% 20%;
   text-transform: capitalize;
 }
 .container .cards-container {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 3rem 6rem;
+  padding-left: 18%;
 }
 .container .cards-container .card {
   position: relative;
-  width: 45%;
-  cursor: pointer;
   display: flex;
-  padding: 3rem;
-  border-radius: 10%;
   height: 25rem;
-  flex-direction: column;
+  width: 40%;
+  padding-top: 15rem;
+  border-radius: 10%;
   color: white;
+  flex-direction: column;
   text-align: center;
   row-gap: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.container .cards-container .card .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .cards-container .card .background-image::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  transition-duration: 0.5s;
+}
+.container .cards-container .card .background-image:hover::after {
+  transform: scale(1.2);
+}
+.container .cards-container .card:first-child .background-image::after {
+  background-image: url("../assets/images/space1.jpg");
+}
+.container .cards-container .card:nth-child(2) .background-image::after {
+  background-image: url("../assets/images/space2.jpg");
+}
+.container .cards-container .card:nth-child(3) .background-image::after {
+  background-image: url("../assets/images/space3.jpg");
+}
+.container .cards-container .card:nth-child(4) .background-image::after {
+  background-image: url("../assets/images/space4.jpg");
 }
 .container .cards-container .card .owner {
   display: flex;
@@ -159,45 +246,23 @@ header nav ul li:hover::after {
 }
 .container .cards-container .card button {
   margin: auto;
-  margin-top: 60%;
   text-transform: uppercase;
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 10%;
   transform: skew(-20deg);
   letter-spacing: 0.02rem;
+  transition-duration: 0.5s;
 }
-.container .cards-container .card::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  border-radius: inherit;
+.container .cards-container .card button:hover {
+  box-shadow: 10px 10px 0px 133px rgba(14, 126, 164, 0.75);
+  -webkit-box-shadow: 2px 2px 8px 6px rgba(14, 126, 164, 0.75);
+  -moz-box-shadow: 10px 10px 0px 133px rgba(14, 126, 164, 0.75);
 }
-.container .cards-container .card:first-child::after {
-  background-image: url("../assets/images/space1.jpg");
-}
-.container .cards-container .card:nth-child(2)::after {
-  background-image: url("../assets/images/space2.jpg");
-}
-.container .cards-container .card:nth-child(3)::after {
-  background-image: url("../assets/images/space3.jpg");
-}
-.container .cards-container .card:nth-child(4) {
-  background-image: url("../assets/images/space4.jpg");
-}
-.container aside {
-  background-color: green;
-}
-
-.health {
+.container .health {
   background-color: #FF376C;
 }
-
-.lifestyle {
+.container .lifestyle {
   background-color: #8571ff;
 }
 
