@@ -1,7 +1,6 @@
 @use './reset.scss';
 
 .container aside {
-    background-color: red;
     text-transform: capitalize;
 
     .send-mail {
@@ -12,6 +11,7 @@
         text-align: center;
         color: white;
         padding: 5rem 3rem;
+        margin-bottom: 6rem;
 
         h1 {
             font-size: 3rem;
@@ -49,6 +49,75 @@
                 background-color: green;
                 z-index: 100;
             }
+        }
+    }
+
+    .stay-connected {
+        text-align: center;
+        
+        &>* {
+            margin-top: 3rem;
+        }
+        .pointer {
+            width: 50%;
+            height: 5px;
+            margin-left: 45%;
+            margin-top: 0.5rem;
+            display: flex;
+
+            .line {
+                width: 20%;
+                height: 100%;
+                border-radius: 5rem;
+                background-color: red;
+            }
+
+            &>* {
+                margin-right: 5px;
+            }
+
+            .point {
+                width: 3%;
+                height: 100%;
+                border-radius: 5rem;
+                background-color: red;
+            }
+        }
+
+        .contacts {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            &>div {
+                position: relative;
+                padding-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                row-gap: 0.2rem;
+                color: gray;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 30%;
+                    width: 3rem;
+                    border-radius: 4%;
+                    margin-top: -20px;
+                    transition-duration: 0.4s;
+
+                    &:hover {
+                        top: -0.5rem;
+                    }
+                }
+
+                & span:last-child {
+                    color: red;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+
         }
     }
 }

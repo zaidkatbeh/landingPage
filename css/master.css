@@ -127,7 +127,6 @@ button:focus {
 }
 
 .container aside {
-  background-color: red;
   text-transform: capitalize;
 }
 .container aside .send-mail {
@@ -138,6 +137,7 @@ button:focus {
   text-align: center;
   color: white;
   padding: 5rem 3rem;
+  margin-bottom: 6rem;
 }
 .container aside .send-mail h1 {
   font-size: 3rem;
@@ -171,6 +171,65 @@ button:focus {
   top: 0;
   background-color: green;
   z-index: 100;
+}
+.container aside .stay-connected {
+  text-align: center;
+}
+.container aside .stay-connected > * {
+  margin-top: 3rem;
+}
+.container aside .stay-connected .pointer {
+  width: 50%;
+  height: 5px;
+  margin-left: 45%;
+  margin-top: 0.5rem;
+  display: flex;
+}
+.container aside .stay-connected .pointer .line {
+  width: 20%;
+  height: 100%;
+  border-radius: 5rem;
+  background-color: red;
+}
+.container aside .stay-connected .pointer > * {
+  margin-right: 5px;
+}
+.container aside .stay-connected .pointer .point {
+  width: 3%;
+  height: 100%;
+  border-radius: 5rem;
+  background-color: red;
+}
+.container aside .stay-connected .contacts {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.container aside .stay-connected .contacts > div {
+  position: relative;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 0.2rem;
+  color: gray;
+}
+.container aside .stay-connected .contacts > div img {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 3rem;
+  border-radius: 4%;
+  margin-top: -20px;
+  transition-duration: 0.4s;
+}
+.container aside .stay-connected .contacts > div img:hover {
+  top: -0.5rem;
+}
+.container aside .stay-connected .contacts > div span:last-child {
+  color: red;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .container {
