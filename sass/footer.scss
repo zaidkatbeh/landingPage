@@ -1,6 +1,6 @@
 footer {
     margin-top: 6rem;
-    padding: 6rem 15rem;
+    padding: 6rem;
     text-align: center;
     background-color: black;
     color: white;
@@ -11,16 +11,17 @@ footer {
 
     .images {
         display: grid;
-        row-gap: 4rem;
+        column-gap: 2rem;
         grid-template-columns: repeat(6, 1fr);
-    
+        width: min-content;
+        padding-left: auto;
+
         .image {
             position: relative;
             cursor: pointer;
             width: 12rem;
             overflow: hidden;
             border-radius: 4%;
-
 
             img {
                 z-index: 1;

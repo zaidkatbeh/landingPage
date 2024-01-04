@@ -21,6 +21,7 @@ $pink : #FF376C;
       display: flex;
       height: 25rem;
       width: 40%;
+      // max-width: 50%;
       padding-top: 15rem;
       border-radius: 10%;
       color: white;
@@ -59,22 +60,22 @@ $pink : #FF376C;
 
       &:first-child .background-image::after,
       &:nth-child(5) .background-image::after {
-        background-image: url('../assets/images/space1.jpg');
+        background-image: url('../images/space1.jpg');
       }
 
       &:nth-child(2) .background-image::after,
       &:nth-child(6) .background-image::after {
-        background-image: url('../assets/images/space2.jpg');
+        background-image: url('../images/space2.jpg');
       }
 
       &:nth-child(3) .background-image::after,
       &:nth-child(7) .background-image::after {
-        background-image: url('../assets/images/space3.jpg');
+        background-image: url('../images/space3.jpg');
       }
 
       &:nth-child(4) .background-image::after,
       &:nth-child(8) .background-image::after {
-        background-image: url('../assets/images/space4.jpg');
+        background-image: url('../images/space4.jpg');
       }
 
       .owner {
@@ -98,12 +99,6 @@ $pink : #FF376C;
         transform: skew(-20deg);
         letter-spacing: 0.02rem;
         transition-duration: 0.5s;
-
-        &:hover {
-          box-shadow: 10px 10px 0px 133px rgba(14, 126, 164, 0.75);
-          -webkit-box-shadow: 2px 2px 8px 6px rgba(14, 126, 164, 0.75);
-          -moz-box-shadow: 10px 10px 0px 133px rgba(14, 126, 164, 0.75);
-        }
       }
     }
 
@@ -111,9 +106,22 @@ $pink : #FF376C;
 
   .health {
     background-color: $pink;
+    
+    &:hover {
+      box-shadow: 10px 10px 0px 133px $pink;
+      -webkit-box-shadow: 2px 2px 8px 6px $pink;
+      -moz-box-shadow: 10px 10px 0px 133px $pink;
+    }
   }
-
+  
   .lifestyle {
     background-color: #8571ff;
+
+    &:hover {
+      box-shadow: 10px 10px 0px 133px rgba(14, 126, 164, 0.75);
+      -webkit-box-shadow: 2px 2px 8px 6px rgba(14, 126, 164, 0.75);
+      -moz-box-shadow: 10px 10px 0px 133px rgba(14, 126, 164, 0.75);
+    }
+    
   }
 }

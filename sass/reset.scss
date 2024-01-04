@@ -5,6 +5,8 @@ $font-stack: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+      outline: none;
+      border: none;
   }
   
   button {
@@ -12,9 +14,6 @@ $font-stack: 'Roboto', sans-serif;
     outline: none;
     cursor: pointer;
 
-    &:focus {
-      outline: none;
-      border: none;
-    }
   }
+  
   
